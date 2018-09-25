@@ -49,8 +49,7 @@ Temporary Items
 
 # User-specific stuff:
 .idea/
-.idea/**/workspace.xml
-.idea/**/tasks.xml
+logs/*.log
 
 # Sensitive or high-churn files:
 .idea/**/dataSources/

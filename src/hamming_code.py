@@ -7,19 +7,25 @@ from typing import Tuple
 # IMPORTANT NOTE: DO NOT IMPORT THE ev3dev.ev3 MODULE IN THIS FILE
 
 class HCResult(IntEnum):
-    """ Return codes for the Hamming Code interface """
+    """
+    Return codes for the Hamming Code interface
+    """
     VALID = 1
     CORRECTED = 2  # whenever ANY bit has been corrected
     UNCORRECTABLE = 3
 
 
 class HammingCode:
-    """ Provides decoding capabilities for the specified Hamming Code """
+    """
+    -- TEMPLATE --
+    Provides decoding capabilities for the specified Hamming Code
+    """
 
-    def decode(self, encodedWord: Tuple[int, int, int, int, int, int, int, int, int, int]) -> Tuple[
+    def decode(self, encoded_word: Tuple[int, int, int, int, int, int, int, int, int, int]) -> Tuple[
         Tuple[int, int, int, int, int], HCResult]:
         """
         Checks the channel alphabet word for errors and attempts to decode it.
+        :param encoded_word: 10-tuple
         :returns: (5-tuple, HCResult) or (None, HCResult)
         """
         # implementation

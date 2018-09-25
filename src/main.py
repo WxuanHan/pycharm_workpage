@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 
-import ev3dev.ev3 as ev3
 from hamming_code import HammingCode
 from stack_machine import StackMachine
+from robot import Robot
 
 
 def run():

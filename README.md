@@ -48,12 +48,6 @@ $ git remote set-url origin https://bitbucket.org/robolab-<season>-<year>/group-
 $ git remote -v
 ```
 
-#### Rename the default branch you're currently on to `master`.
-```
-$ git branch -m <current_branch> master
-```
-* Make sure to enter the correct current branch. This will be the one shown at the GitHub website or in the Git status report which can be brought up via `git status`. For instance it will be `spring-17` for the RoboLab course in Spring 2017.
-
 #### Perform an initial push.
 ```
 $ git push origin master
@@ -158,7 +152,7 @@ Contributors to [robolab-deploy](ttps://github.com/7HAL32/robolab-deploy) (submo
 
 - Version of 2016
 
-  - [Felix DÃ¶ring](https://github.com/h4llow3En)
+  - [Felix Döring](https://github.com/h4llow3En)
   - [Felix Wittwer](https://github.com/Feliix42)
 
 - Version of 2017
@@ -168,4 +162,4 @@ Contributors to [robolab-deploy](ttps://github.com/7HAL32/robolab-deploy) (submo
 
 Part of the RoboLab project.<br>
 Released under the [MIT License](/LICENSE).<br>
-Copyright Â© 2017-2018 Lutz Thies
+Copyright © 2017-2018 Lutz Thies
