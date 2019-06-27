@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 
 from enum import IntEnum
-from typing import Callable, Tuple
+from typing import List, Tuple, Union
 from ctypes import c_ubyte
 
 
@@ -12,33 +12,36 @@ class SMState(IntEnum):
     Return codes for the stack machine
     """
     RUNNING = 1
-    STOPPED = 2
-    ERROR = 3
+    STOPPED = 0
+    ERROR = -1
 
 
 class StackMachine:
     """
     -- TEMPLATE --
-    Implements the stack machine according to the specification
+    Implements the 8-bit stack machine according to the specification
     """
 
     def __init__(self) -> None:
-        """ Initialises the stack machine and its overflow flag """
+        """
+        Initializes the class StackMachine with all values necessary.
+        """
         self.overflow = False
+        self.stack = []
 
-    def do(self, code_word: Tuple[int, int, int, int, int]) -> SMState:
+    def do(self, code_word: Tuple[int, ...]) -> SMState:
         """
         Processes the entered code word by either executing the instruction or pushing the operand on the stack.
-        :param code_word: 5-tuple
+        :param code_word: 6-tuple
         :returns: SMState
         """
-        # implementation
+        # REPLACE "pass" WITH YOUR IMPLEMENTATION
         pass
 
-    def top(self) -> Tuple[int, int, int, int, int, int, int, int]:
+    def top(self) -> Union[None, str, Tuple[int, int, int, int, int, int, int, int]]:
         """
         Returns the top element of the stack.
         :returns: 8-tuple or None
         """
-        # implementation
+        # REPLACE "pass" WITH YOUR IMPLEMENTATION
         pass

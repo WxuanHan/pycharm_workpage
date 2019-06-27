@@ -1,17 +1,6 @@
-The directories and files
-- robolab-deploy/*
-- src/main.py
-- src/Planet.py
-- src/planettest.py
-- deploy.py
-- README.md
-in their original form are hereby released under
-
---------------------------------------------------------------------------------
-
 The MIT License (MIT)
 
-Copyright (c) 2017 Lutz Thies
+Copyright (c) 2017-2018 Lutz Thies
 
 Other contributors: Frank Busse, Felix Döring, Paul Genssler, Felix Wittwer
 
