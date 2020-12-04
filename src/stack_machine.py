@@ -41,7 +41,7 @@ class StackMachine:
     def top(self) -> Union[None, str, Tuple[int, int, int, int, int, int, int, int]]:
         """
         Returns the top element of the stack.
-        :returns: 8-tuple or None
+        :returns: 8-tuple, str or None
         """
         # REPLACE "pass" WITH YOUR IMPLEMENTATION
         pass
