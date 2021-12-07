@@ -18,7 +18,6 @@ class SMState(IntEnum):
 
 class StackMachine:
     """
-    -- TEMPLATE --
     Implements the 8-bit stack machine according to the specification
     """
 
@@ -32,8 +31,11 @@ class StackMachine:
     def do(self, code_word: Tuple[int, ...]) -> SMState:
         """
         Processes the entered code word by either executing the instruction or pushing the operand on the stack.
-        :param code_word: 6-tuple
-        :returns: SMState
+
+        Args:
+            code_word (tuple): Command for the stack machine to execute
+        Returns:
+            SMState: Current state of the stack machine
         """
         # REPLACE "pass" WITH YOUR IMPLEMENTATION
         pass
@@ -41,7 +43,10 @@ class StackMachine:
     def top(self) -> Union[None, str, Tuple[int, int, int, int, int, int, int, int]]:
         """
         Returns the top element of the stack.
-        :returns: 8-tuple, str or None
+
+        Returns:
+            union: Can be tuple, str or None
         """
+
         # REPLACE "pass" WITH YOUR IMPLEMENTATION
         pass

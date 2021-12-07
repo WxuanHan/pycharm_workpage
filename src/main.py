@@ -2,7 +2,7 @@
 
 from hamming_code import HammingCode
 from stack_machine import StackMachine
-from robot import Robot
+from robot import *
 
 
 def run():

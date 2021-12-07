@@ -17,7 +17,6 @@ class HCResult(Enum):
 
 class HammingCode:
     """
-    -- TEMPLATE --
     Provides decoding capabilities for the specified Hamming Code
     """
 
@@ -30,51 +29,59 @@ class HammingCode:
         self.parity_bits = 0  # r
 
         # Predefined non-systematic generator matrix G'
-        g_ns = []
+        gns = []
 
         # Convert non-systematic G' into systematic matrices G, H
-        self.g = self.__convert_g(g_ns)
+        self.g = self.__convert_to_g(gns)
         self.h = self.__derive_h(self.g)
 
-    def __convert_g(self, g_ns: List):
+    def __convert_to_g(self, gns: List):
         """
-        This method executes all steps necessary to convert G' into G.
-        :param g_ns: List
-        :return: List
+        Converts a non-systematic generator matrix into a systematic
+
+        Args:
+            gns (List): Non-systematic generator matrix
+        Returns:
+            list: Converted systematic generator matrix
         """
+
         # REPLACE "pass" WITH YOUR IMPLEMENTATION
         pass
 
     def __derive_h(self, g: List):
         """
         This method executes all steps necessary to derive H from G.
-        :param g: List
-        :return: List
+
+        Args:
+            g (List):
+        Returns:
+            list:
         """
+
         # REPLACE "pass" WITH YOUR IMPLEMENTATION
         pass
 
     def encode(self, source_word: Tuple[int, ...]) -> Tuple[int, ...]:
         """
-        Encodes the given source_word.
-        :param source_word: 6-tuple
-        :return: 11-tuple
+        Encodes the given word and returns the new codeword as tuple.
+
+        Args:
+            source_word (tuple): m-tuple (length depends on number of data bits)
+        Returns:
+            tuple: n-tuple (length depends on number of total bits)
         """
+
         # REPLACE "pass" WITH YOUR IMPLEMENTATION
         pass
 
     def decode(self, encoded_word: Tuple[int, ...]) -> Tuple[Union[None, Tuple[int, ...]], HCResult]:
         """
         Checks the channel alphabet word for errors and attempts to decode it.
-        :param encoded_word: 11-tuple
-        :returns: (6-tuple, HCResult) or (None, HCResult)
+        Args:
+            encoded_word (tuple): n-tuple (length depends on number of total bits)
+        Returns:
+            Union: (m-tuple, HCResult) or (None, HCResult)(length depends on number of data bits)
         """
+
         # REPLACE "pass" WITH YOUR IMPLEMENTATION
         pass
-
-    def get_signature(self) -> Tuple[int, int, int]:
-        """
-        Returns signature of the Hamming Code.
-        :return: 3-tuple
-        """
-        return self.total_bits, self.data_bits, self.parity_bits

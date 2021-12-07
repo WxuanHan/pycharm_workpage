@@ -1,37 +1,21 @@
 #!/usr/bin/env python3
 
-import unittest
+import io
 import unittest.mock
+from hamming_code import *
+from stack_machine import *
 
 
-class TestHammingCode(unittest.TestCase):
-    def test_instance(self):
-        """ Essential: Test class instantiation """
+class TestRobot(unittest.TestCase):
+    @unittest.mock.patch('sys.stdout', new_callable=io.StringIO)
+    def test_example(self, mock_stdout):
+        """
+            Example implementation of whole workflow:
+                - Decode valid/correctable codes and
+                - Execute the opcodes on the stack machine
+                - Checking the final result afterwards
+        """
         self.fail('implement me!')
-
-    def test_decode_valid(self):
-        """ Essential: Test method decode() with VALID input """
-        self.fail('implement me!')
-
-    def test_decode_corrected(self):
-        """ Essential: Test method decode() with CORRECTED input """
-        self.fail('implement me!')
-
-    def test_decode_uncorrectable(self):
-        """ Essential: Test method decode() with UNCORRECTABLE input """
-        self.fail('implement me!')
-
-    def test_encode(self):
-        """ Essential: Test method encode() """
-        self.fail('implement me!')
-
-
-class TestStackMachine(unittest.TestCase):
-    def test_instance(self):
-        """ Essential: Test class instantiation """
-        self.fail('implement me!')
-
-    """ Please add your test cases here! """
 
 
 if __name__ == '__main__':
